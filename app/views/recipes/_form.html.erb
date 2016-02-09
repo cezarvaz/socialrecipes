@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-md-12">
+    <%= simple_form_for @recipe do |f| %>
+      <%= f.input :name %>
+      <%= f.input :cuisine %>
+      <%= f.input :type_of_food %>
+      <%= f.input :food_preferences %>
+      <%= f.input :servings %>
+      <%= f.input :prepare_time %>
+      <%= f.input :difficulty %>
+      <%= f.input :ingredients, as: :text %>
+      <%= f.input :directions, as: :text %>
+      <%= f.button :submit, 'Salvar receita', class:"btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/cezarvaz/workspace/socialrecipes/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/cezarvaz/workspace/socialrecipes/app/models/recipe.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/cezarvaz/workspace/socialrecipes/app/controllers/recipes_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/home/cezarvaz/workspace/socialrecipes/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1455055606
+  }
+}
