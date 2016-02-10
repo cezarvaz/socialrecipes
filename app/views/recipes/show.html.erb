@@ -1,0 +1,24 @@
+<div class="page-header">
+  <h1>Receita de: <%= @recipe.name %></h1>
+</div>
+
+<dl id="recipe-details" class="dl-horizontal">
+  <dt>Cozinha</dt>
+  <dd><%= @recipe.cuisine %></dd>
+  <dt>Tipo de comida</dt>
+  <dd><%= @recipe.type_of_food %></dd>
+  <dt>Preferência de comida</dt>
+  <dd><%= @recipe.food_preferences %></dd>
+  <dt>Quantas pessoas serve</dt>
+  <dd><%= @recipe.servings %></dd>
+  <dt>Tempo de preparo</dt>
+  <dd><%= @recipe.prepare_time%></dd>
+  <dt>Nível de dificuldade</dt>
+  <dd><%= @recipe.difficulty %></dd>
+  <dt>Ingredientes</dt>
+  <dd><%= @recipe.ingredients %></dd>
+  <dt>Passo a passo</dt>
+  <dd><%= @recipe.directions %></dd>
+  <dt>Imagem</dt>
+  <dd><%= image_tag @recipe.image.url %></dd>
+</dl>

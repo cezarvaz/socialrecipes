@@ -6,17 +6,17 @@ feature 'Create a new recipe' do
 
     visit new_recipe_path
 
-    fill_in 'name', with: recipe.name
-    fill_in 'cuisine', with: recipe.cuisine
-    fill_in 'type_of_food', with: recipe.type_of_food
-    fill_in 'food_preferences', with: recipe.food_preferences
-    fill_in 'servings', with: recipe.servings
-    fill_in 'prepare_time', with: recipe.prepare_time
-    fill_in 'difficulty', with: recipe.difficulty
-    fill_in 'ingredients', with: recipe.ingredients
-    fill_in 'directions', with: recipe.directions
-    attach_file('image', 'spec/images/receita-de-frango-ao-curry.jpg')
-    # attach_file "File", "spec/images/receita-de-frango-ao-curry.jpg"
+    fill_in 'recipe[name]', with: recipe.name
+    fill_in 'recipe[cuisine]', with: recipe.cuisine
+    fill_in 'recipe[type_of_food]', with: recipe.type_of_food
+    fill_in 'recipe[food_preferences]', with: recipe.food_preferences
+    fill_in 'recipe[servings]', with: recipe.servings
+    fill_in 'recipe[prepare_time]', with: recipe.prepare_time
+    fill_in 'recipe[difficulty]', with: recipe.difficulty
+    fill_in 'recipe[ingredients]', with: recipe.ingredients
+    fill_in 'recipe[directions]', with: recipe.directions
+    # attach_file 'recipe[image]', 'spec/images/receita-de-frango-ao-curry.jpg'
+    page.attach_file('recipe[image]', 'spec/images/receita-de-frango-ao-curry.jpg')
 
     click_on 'Salvar receita'
 
