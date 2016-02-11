@@ -27,6 +27,6 @@ class RecipesController < ApplicationController
     params.require(:recipe)
           .permit(:name, :cuisine, :type_of_food, :food_preferences, :servings,
                   :prepare_time, :difficulty, :ingredients, :directions,
-                  :image_file_name)
+                  :image)
   end
 end
