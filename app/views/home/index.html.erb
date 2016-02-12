@@ -34,7 +34,6 @@
         <h3>Últimas Receitas</h3>
         <% @recipes.each do |recipe| %>
           <div class="col-md-6">
-            <%= image_tag @recipe.image.url %>
             <p><%= link_to recipe.name, recipe %></p>
             <p>Preferência: <%= recipe.food_preferences %></p>
             <p>Tipo: <%= recipe.type_of_food %></p>
@@ -50,8 +49,7 @@
         <h3>Favoritas dos Usuários</h3>
         <% @recipes.each do |recipe| %>
           <div class="col-md-6">
-            <%= image_tag @recipe.image.url %>
-            <p><%= link_to recipe.name, recipe %></p>
+	          <p><%= link_to recipe.name, recipe %></p>
             <p>Preferência: <%= recipe.food_preferences %></p>
             <p>Tipo: <%= recipe.type_of_food %></p>
             <p>Cozinha: <%= recipe.cuisine %></p>
