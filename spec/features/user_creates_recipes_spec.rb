@@ -28,7 +28,7 @@ feature 'Create a new recipe' do
     expect(page).to have_content(recipe.difficulty)
     expect(page).to have_content(recipe.ingredients)
     expect(page).to have_content(recipe.directions)
-    expect(page).to have_xpath("//img[contains(@src,'#{recipe.image.url}')]")
+    expect(page).to have_xpath("//img[contains(@src,'receita-de-frango-ao-curry.jpg')]")
   end
 
   scenario 'successfully without image' do

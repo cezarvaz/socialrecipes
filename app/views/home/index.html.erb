@@ -28,19 +28,26 @@
     </aside>
   </div>
 
-  <div class="col-md-4">
+  <div class="col-md-8">
     <section id="last_recipes">
       <div class="row">
         <h3>Últimas Receitas</h3>
         <% @recipes.each do |recipe| %>
           <div class="col-md-6">
-            <p><%= link_to recipe.name, recipe %></p>
-            <p>Preferência: <%= recipe.food_preferences %></p>
-            <p>Tipo: <%= recipe.type_of_food %></p>
-            <p>Cozinha: <%= recipe.cuisine %></p>
-            <p>Dificuldade: <%= recipe.difficulty %></p>
+            <div class="row">
+              <div class="col-md-5">
+                <%= image_tag recipe.image.url, class: 'img-responsive' %>
+              </div>
+              <div class="col-md-7">
+                <p><%= link_to recipe.name, recipe %></p>
+                <p>Preferência: <%= recipe.food_preferences %></p>
+                <p>Tipo: <%= recipe.type_of_food %></p>
+                <p>Cozinha: <%= recipe.cuisine %></p>
+                <p>Dificuldade: <%= recipe.difficulty %></p>
+              </div>
+            </div>
           </div>
-          <% end %>
+        <% end %>
       </div>
     </section>
 
@@ -48,15 +55,22 @@
       <div class="row">
         <h3>Favoritas dos Usuários</h3>
         <% @recipes.each do |recipe| %>
-          <div class="col-md-6">
-	          <p><%= link_to recipe.name, recipe %></p>
-            <p>Preferência: <%= recipe.food_preferences %></p>
-            <p>Tipo: <%= recipe.type_of_food %></p>
-            <p>Cozinha: <%= recipe.cuisine %></p>
-            <p>Dificuldade: <%= recipe.difficulty %></p>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-5">
+              <%= image_tag recipe.image.url, class: 'img-responsive' %>
+            </div>
+            <div class="col-md-7">
+              <p><%= link_to recipe.name, recipe %></p>
+              <p>Preferência: <%= recipe.food_preferences %></p>
+              <p>Tipo: <%= recipe.type_of_food %></p>
+              <p>Cozinha: <%= recipe.cuisine %></p>
+              <p>Dificuldade: <%= recipe.difficulty %></p>
+            </div>
           </div>
-          <% end %>
-      </div>
+        </div>
+      <% end %>
+    </div>
     </section>
   </div>
 </div>

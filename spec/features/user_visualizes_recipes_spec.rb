@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-feature 'Create a new recipe' do
-  scenario 'successfully with all data' do
+feature 'Visualize a new recipe' do
+  scenario 'successfully' do
     recipe = create(:recipe)
 
     visit root_path
