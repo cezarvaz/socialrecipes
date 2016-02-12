@@ -13,6 +13,7 @@
         null,
         null,
         null,
+        null,
         1,
         null
       ],
@@ -56,8 +57,15 @@
         null,
         1,
         null
+      ],
+      "/home/cezarvaz/workspace/socialrecipes/app/controllers/home_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1455158668
+    "timestamp": 1455237181
   }
 }

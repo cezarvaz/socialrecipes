@@ -1,0 +1,64 @@
+<div class="row">
+  <div class="col-md-4 hidden-sm hidden-xs">
+    <aside>
+      <h4>Preferência</h4>
+      <dl>
+        <dt> Vegetariana </dt>
+        <dt> Carnes </dt>
+        <dt> Diet </dt>
+      </dl>
+    </aside>
+    <br>
+    <aside>
+      <h4>Tipo</h4>
+      <dl>
+        <dt> Entrada </dt>
+        <dt> Principal </dt>
+        <dt> Sobremesa </dt>
+      </dl>
+    </aside>
+    <br>
+    <aside>
+      <h4>Cozinha</h4>
+      <dl>
+        <dt> Mineira </dt>
+        <dt> Italiana </dt>
+        <dt> Mexicana </dt>
+      </dl>
+    </aside>
+  </div>
+
+  <div class="col-md-4">
+    <section id="last_recipes">
+      <div class="row">
+        <h3>Últimas Receitas</h3>
+        <% @recipes.each do |recipe| %>
+          <div class="col-md-6">
+            <%= image_tag @recipe.image.url %>
+            <p><%= link_to recipe.name, recipe %></p>
+            <p>Preferência: <%= recipe.food_preferences %></p>
+            <p>Tipo: <%= recipe.type_of_food %></p>
+            <p>Cozinha: <%= recipe.cuisine %></p>
+            <p>Dificuldade: <%= recipe.difficulty %></p>
+          </div>
+          <% end %>
+      </div>
+    </section>
+
+    <section id="user_favorites">
+      <div class="row">
+        <h3>Favoritas dos Usuários</h3>
+        <% @recipes.each do |recipe| %>
+          <div class="col-md-6">
+            <%= image_tag @recipe.image.url %>
+            <p><%= link_to recipe.name, recipe %></p>
+            <p>Preferência: <%= recipe.food_preferences %></p>
+            <p>Tipo: <%= recipe.type_of_food %></p>
+            <p>Cozinha: <%= recipe.cuisine %></p>
+            <p>Dificuldade: <%= recipe.difficulty %></p>
+          </div>
+          <% end %>
+      </div>
+    </section>
+  </div>
+</div>

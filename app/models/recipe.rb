@@ -3,6 +3,7 @@ class Recipe < ActiveRecord::Base
             :ingredients, :directions, presence: true
   has_attached_file :image, styles: { medium: '300x300>',
                                       thumb: '100x100>' },
+                            default_url: '/images/:style/missing.png',
                             path: ':rails_root/public/images/recipes/:id-:basename-:style.:extension',
                             url: '/images/recipes/:basename-:style.:extension'
   validates_attachment_content_type :image, content_type: %r{\Aimage\/.*\Z}
