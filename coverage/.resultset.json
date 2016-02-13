@@ -1,11 +1,11 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/campuscodemm5/workspace/socialrecipes/app/helpers/application_helper.rb": [
+      "/home/cezarvaz/workspace/socialrecipes/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/campuscodemm5/workspace/socialrecipes/app/models/recipe.rb": [
+      "/home/cezarvaz/workspace/socialrecipes/app/models/recipe.rb": [
         1,
         1,
         null,
@@ -15,7 +15,7 @@
         1,
         null
       ],
-      "/Users/campuscodemm5/workspace/socialrecipes/app/controllers/recipes_controller.rb": [
+      "/home/cezarvaz/workspace/socialrecipes/app/controllers/recipes_controller.rb": [
         1,
         1,
         null,
@@ -49,14 +49,14 @@
         null,
         null
       ],
-      "/Users/campuscodemm5/workspace/socialrecipes/app/controllers/application_controller.rb": [
+      "/home/cezarvaz/workspace/socialrecipes/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/Users/campuscodemm5/workspace/socialrecipes/app/controllers/home_controller.rb": [
+      "/home/cezarvaz/workspace/socialrecipes/app/controllers/home_controller.rb": [
         1,
         1,
         1,
@@ -64,6 +64,6 @@
         null
       ]
     },
-    "timestamp": 1455299138
+    "timestamp": 1455307488
   }
 }
