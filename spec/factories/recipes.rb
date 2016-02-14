@@ -3,7 +3,7 @@ FactoryGirl.define do
     cuisine
     type
     name 'Frango ao Curry'
-    food_preferences 'Bastante curry!'
+    preference
     servings 4
     prepare_time 30
     difficulty 'Fácil'

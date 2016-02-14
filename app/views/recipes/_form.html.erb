@@ -5,7 +5,7 @@
         <%= f.input :name, label: 'Nome' %>
         <%= f.association :cuisine, label: "Cozinha" %>
         <%= f.association :type, label: 'Tipo de comida' %>
-        <%= f.input :food_preferences, label: 'Preferências de comida' %>
+        <%= f.association :preference, label: 'Preferências de comida' %>
         <%= f.input :servings, label: 'Quantas pessoas serve' %>
         <%= f.input :prepare_time, label: 'Tempo de preparo (em minutos)' %>
         <%= f.input :difficulty, label: 'Nível de dificuldade (Fácil, Média ou Difícil)' %>

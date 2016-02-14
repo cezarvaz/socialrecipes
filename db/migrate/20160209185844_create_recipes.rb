@@ -4,7 +4,7 @@ class CreateRecipes < ActiveRecord::Migration
       t.string :name
       t.string :cuisine
       t.string :type
-      t.string :food_preferences
+      t.string :preference
       t.integer :servings
       t.integer :prepare_time
       t.string :difficulty

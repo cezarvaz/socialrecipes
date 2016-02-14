@@ -3,5 +3,6 @@ class HomeController < ApplicationController
     @recipes = Recipe.all
     @cuisines = Cuisine.all
     @types = Type.all
+    @preferences = Preference.all
   end
 end

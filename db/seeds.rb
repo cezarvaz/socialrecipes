@@ -10,10 +10,16 @@ type2 = Type.create!(name: 'Sobremesa')
 
 type3 = Type.create!(name: 'Entrada')
 
+preference1 = Preference.create!(name: 'Frango')
+
+preference2 = Preference.create!(name: 'Doces')
+
+preference3 = Preference.create!(name: 'Sopas')
+
 recipe1 = Recipe.create!(name: 'Frango ao Curry',
                         cuisine: cuisine1,
                         type: type1,
-                        food_preferences: 'Frango',
+                        preference: preference1,
                         servings: 4,
                         prepare_time: 30,
                         difficulty: 'Fácil',
@@ -24,7 +30,7 @@ recipe1 = Recipe.create!(name: 'Frango ao Curry',
 recipe2 = Recipe.create!(name: 'Cheesecake',
                         cuisine: cuisine2,
                         type: type2,
-                        food_preferences: 'Doces',
+                        preference: preference2,
                         servings: 10,
                         prepare_time: 60,
                         difficulty: 'Média',
@@ -35,7 +41,7 @@ recipe2 = Recipe.create!(name: 'Cheesecake',
 recipe3 = Recipe.create!(name: 'Gazpacho',
                         cuisine: cuisine3,
                         type: type3,
-                        food_preferences: 'Sopa',
+                        preference: preference3,
                         servings: 4,
                         prepare_time: 30,
                         difficulty: 'Fácil',

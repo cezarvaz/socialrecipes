@@ -5,9 +5,9 @@
         <aside>
           <h3>Preferência</h3>
           <dl>
-            <dt class="text-left"> Vegetariana </dt>
-            <dt class="text-left"> Carnes </dt>
-            <dt class="text-left"> Diet </dt>
+            <% @preferences.each do |preference| %>
+              <dt class="text-left"> <%= preference.name %> </dt>
+            <% end  %>
           </dl>
         </aside>
         <br>
@@ -42,7 +42,7 @@
                     </div>
                     <div class="col-md-7">
                       <p><%= link_to recipe.name, recipe %></p>
-                      <p>Preferência: <%= recipe.food_preferences %></p>
+                      <p>Preferência: <%= recipe.preference.name %></p>
                       <p>Tipo: <%= recipe.type.name %></p>
                       <p>Cozinha: <%= recipe.cuisine.name %></p>
                       <p>Dificuldade: <%= recipe.difficulty %></p>
@@ -63,7 +63,7 @@
                     </div>
                     <div class="col-md-7">
                       <p><%= link_to recipe.name, recipe %></p>
-                      <p>Preferência: <%= recipe.food_preferences %></p>
+                      <p>Preferência: <%= recipe.preference.name %></p>
                       <p>Tipo: <%= recipe.type.name %></p>
                       <p>Cozinha: <%= recipe.cuisine.name %></p>
                       <p>Dificuldade: <%= recipe.difficulty %></p>
