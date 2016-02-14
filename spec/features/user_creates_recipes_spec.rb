@@ -2,6 +2,7 @@ require 'rails_helper'
 
 feature 'Create a new recipe' do
   scenario 'successfully with all data' do
+    cuisine = build(:cuisine)
     recipe = build(:recipe)
 
     visit new_recipe_path
@@ -32,6 +33,7 @@ feature 'Create a new recipe' do
   end
 
   scenario 'successfully without image' do
+    cuisine = build(:cuisine)
     recipe = build(:recipe)
 
     visit new_recipe_path
@@ -62,6 +64,7 @@ feature 'Create a new recipe' do
   end
 
   scenario 'unsuccessfully' do
+    cuisine = build(:cuisine)
     recipe = build(:recipe)
 
     visit new_recipe_path

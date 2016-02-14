@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :recipe do
+    cuisine
     name 'Frango ao Curry'
-    cuisine 'Brasileira'
     type_of_food 'Frango'
     food_preferences 'Bastante curry!'
     servings 4

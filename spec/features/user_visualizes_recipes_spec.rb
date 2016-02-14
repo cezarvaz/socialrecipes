@@ -2,6 +2,7 @@ require 'rails_helper'
 
 feature 'Visualize a new recipe' do
   scenario 'successfully' do
+    cuisine = build(:cuisine)
     recipe = create(:recipe)
 
     visit root_path

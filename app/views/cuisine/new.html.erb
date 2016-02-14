@@ -1,0 +1,11 @@
+<h3>Nova Cozinha</h3>
+<div class="row">
+  <div class="col-md-12">
+    <%= simple_form_for @cuisine do |f| %>
+      <div class="form-group">
+        <%= f.input :name, label: 'Nome' %>
+        <%= f.button :submit, 'Salvar cozinha', class:"btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
