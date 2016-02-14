@@ -25,12 +25,13 @@ class RecipesController < ApplicationController
   end
 
   def set_collections
-    @cuisine = Cuisine.all
+    @cuisines = Cuisine.all
+    @types = Type.all
   end
 
   def recipe_params
     params.require(:recipe)
-          .permit(:name, :cuisine_id, :type_of_food, :food_preferences, :servings,
+          .permit(:name, :cuisine_id, :type_id, :food_preferences, :servings,
                   :prepare_time, :difficulty, :ingredients, :directions,
                   :image)
   end

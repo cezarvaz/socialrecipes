@@ -4,9 +4,15 @@ cuisine2 = Cuisine.create!(name: 'Americana')
 
 cuisine3 = Cuisine.create!(name: 'Espanhola')
 
+type1 = Type.create!(name: 'Principal')
+
+type2 = Type.create!(name: 'Sobremesa')
+
+type3 = Type.create!(name: 'Entrada')
+
 recipe1 = Recipe.create!(name: 'Frango ao Curry',
                         cuisine: cuisine1,
-                        type_of_food: 'Principal',
+                        type: type1,
                         food_preferences: 'Frango',
                         servings: 4,
                         prepare_time: 30,
@@ -17,7 +23,7 @@ recipe1 = Recipe.create!(name: 'Frango ao Curry',
 
 recipe2 = Recipe.create!(name: 'Cheesecake',
                         cuisine: cuisine2,
-                        type_of_food: 'Sobremesa',
+                        type: type2,
                         food_preferences: 'Doces',
                         servings: 10,
                         prepare_time: 60,
@@ -28,7 +34,7 @@ recipe2 = Recipe.create!(name: 'Cheesecake',
 
 recipe3 = Recipe.create!(name: 'Gazpacho',
                         cuisine: cuisine3,
-                        type_of_food: 'Entrada',
+                        type: type3,
                         food_preferences: 'Sopa',
                         servings: 4,
                         prepare_time: 30,

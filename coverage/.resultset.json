@@ -20,6 +20,13 @@
         null,
         1,
         1,
+        1,
+        null
+      ],
+      "/home/cezarvaz/workspace/socialrecipes/app/models/type.rb": [
+        1,
+        1,
+        1,
         null
       ],
       "/home/cezarvaz/workspace/socialrecipes/app/controllers/cuisines_controller.rb": [
@@ -64,7 +71,40 @@
       "/home/cezarvaz/workspace/socialrecipes/app/controllers/home_controller.rb": [
         1,
         1,
+        3,
+        3,
+        3,
+        null,
+        null
+      ],
+      "/home/cezarvaz/workspace/socialrecipes/app/controllers/types_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
         2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        null,
         2,
         null,
         null
@@ -98,6 +138,7 @@
         null,
         1,
         2,
+        2,
         null,
         null,
         1,
@@ -109,6 +150,6 @@
         null
       ]
     },
-    "timestamp": 1455487235
+    "timestamp": 1455492520
   }
 }

@@ -14,18 +14,18 @@
         <aside>
           <h3>Tipo</h3>
           <dl>
-            <dt class="text-left"> Entrada </dt>
-            <dt class="text-left"> Principal </dt>
-            <dt class="text-left"> Sobremesa </dt>
+            <% @types.each do |type| %>
+              <dt class="text-left"> <%= type.name %> </dt>
+            <% end  %>
           </dl>
         </aside>
         <br>
         <aside>
           <h3>Cozinha</h3>
           <dl>
-            <dt class="text-left"> Mineira </dt>
-            <dt class="text-left"> Italiana </dt>
-            <dt class="text-left"> Mexicana </dt>
+            <% @cuisines.each do |cuisine| %>
+              <dt class="text-left"> <%= cuisine.name %> </dt>
+            <% end  %>
           </dl>
         </aside>
       </div>
@@ -36,7 +36,7 @@
               <h3><%= @recipe.name %></h3>
               <p>Enviado por: Cezar Vaz</p>
               <p>Preferência: <%= @recipe.food_preferences %></p>
-              <p>Tipo: <%= @recipe.type_of_food %></p>
+              <p>Tipo: <%= @recipe.type.name %></p>
               <p>Cozinha: <%= @recipe.cuisine.name %></p>
               <p>Serve: <%= @recipe.servings %> pessoas</p>
               <p>Tempo de preparo: <%= @recipe.prepare_time %> minutos</p>

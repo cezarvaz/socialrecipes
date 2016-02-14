@@ -3,7 +3,7 @@ class CreateRecipes < ActiveRecord::Migration
     create_table :recipes do |t|
       t.string :name
       t.string :cuisine
-      t.string :type_of_food
+      t.string :type
       t.string :food_preferences
       t.integer :servings
       t.integer :prepare_time

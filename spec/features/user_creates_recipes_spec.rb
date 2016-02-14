@@ -8,7 +8,7 @@ feature 'Create a new recipe' do
 
     fill_in 'recipe[name]', with: recipe.name
     select recipe.cuisine.name, from: 'recipe[cuisine_id]'
-    fill_in 'recipe[type_of_food]', with: recipe.type_of_food
+    select recipe.type.name, from: 'recipe[type_id]'
     fill_in 'recipe[food_preferences]', with: recipe.food_preferences
     fill_in 'recipe[servings]', with: recipe.servings
     fill_in 'recipe[prepare_time]', with: recipe.prepare_time
@@ -21,7 +21,7 @@ feature 'Create a new recipe' do
 
     expect(page).to have_content(recipe.name)
     expect(page).to have_content(recipe.cuisine.name)
-    expect(page).to have_content(recipe.type_of_food)
+    expect(page).to have_content(recipe.type.name)
     expect(page).to have_content(recipe.food_preferences)
     expect(page).to have_content(recipe.servings)
     expect(page).to have_content(recipe.prepare_time)
@@ -38,7 +38,7 @@ feature 'Create a new recipe' do
 
     fill_in 'recipe[name]', with: recipe.name
     select recipe.cuisine.name, from: 'recipe[cuisine_id]'
-    fill_in 'recipe[type_of_food]', with: recipe.type_of_food
+    select recipe.type.name, from: 'recipe[type_id]'
     fill_in 'recipe[food_preferences]', with: recipe.food_preferences
     fill_in 'recipe[servings]', with: recipe.servings
     fill_in 'recipe[prepare_time]', with: recipe.prepare_time
@@ -50,7 +50,7 @@ feature 'Create a new recipe' do
 
     expect(page).to have_content(recipe.name)
     expect(page).to have_content(recipe.cuisine.name)
-    expect(page).to have_content(recipe.type_of_food)
+    expect(page).to have_content(recipe.type.name)
     expect(page).to have_content(recipe.food_preferences)
     expect(page).to have_content(recipe.servings)
     expect(page).to have_content(recipe.prepare_time)
@@ -68,7 +68,7 @@ feature 'Create a new recipe' do
 
     fill_in 'recipe[name]', with: recipe.name
     select recipe.cuisine.name, from: 'recipe[cuisine_id]'
-    fill_in 'recipe[type_of_food]', with: recipe.type_of_food
+    select recipe.type.name, from: 'recipe[type_id]'
     fill_in 'recipe[food_preferences]', with: recipe.food_preferences
     fill_in 'recipe[servings]', with: recipe.servings
     fill_in 'recipe[prepare_time]', with: recipe.prepare_time
