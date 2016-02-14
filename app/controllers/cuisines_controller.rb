@@ -1,4 +1,4 @@
-class CuisineController < ApplicationController
+class CuisinesController < ApplicationController
   before_action :set_cuisine, only: [:edit, :show, :update]
 
   def show
@@ -11,7 +11,7 @@ class CuisineController < ApplicationController
   def create
     @cuisine = Cuisine.new(cuisine_params)
     if @cuisine.save
-      redirect_to @cuisine
+      redirect_to root_path
     else
       render :new
     end

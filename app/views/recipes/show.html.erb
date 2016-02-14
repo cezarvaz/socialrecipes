@@ -37,7 +37,7 @@
               <p>Enviado por: Cezar Vaz</p>
               <p>Preferência: <%= @recipe.food_preferences %></p>
               <p>Tipo: <%= @recipe.type_of_food %></p>
-              <p>Cozinha: <%= @recipe.cuisine %></p>
+              <p>Cozinha: <%= @recipe.cuisine.name %></p>
               <p>Serve: <%= @recipe.servings %> pessoas</p>
               <p>Tempo de preparo: <%= @recipe.prepare_time %> minutos</p>
               <p>Dificuldade: <%= @recipe.difficulty %></p>

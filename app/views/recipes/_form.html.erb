@@ -3,7 +3,7 @@
     <%= simple_form_for @recipe, :html => { :multipart => true } do |f| %>
       <div class="form-group">
         <%= f.input :name, label: 'Nome' %>
-        <%= f.input :cuisine, label: 'Cozinha' %>
+        <%= f.association :cuisine, label: "Cozinha" %>
         <%= f.input :type_of_food, label: 'Tipo de comida' %>
         <%= f.input :food_preferences, label: 'Preferências de comida' %>
         <%= f.input :servings, label: 'Quantas pessoas serve' %>

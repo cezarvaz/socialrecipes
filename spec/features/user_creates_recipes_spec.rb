@@ -2,13 +2,12 @@ require 'rails_helper'
 
 feature 'Create a new recipe' do
   scenario 'successfully with all data' do
-    cuisine = build(:cuisine)
     recipe = build(:recipe)
 
     visit new_recipe_path
 
     fill_in 'recipe[name]', with: recipe.name
-    fill_in 'recipe[cuisine]', with: recipe.cuisine
+    select recipe.cuisine.name, from: 'recipe[cuisine_id]'
     fill_in 'recipe[type_of_food]', with: recipe.type_of_food
     fill_in 'recipe[food_preferences]', with: recipe.food_preferences
     fill_in 'recipe[servings]', with: recipe.servings
@@ -21,7 +20,7 @@ feature 'Create a new recipe' do
     click_on 'Salvar receita'
 
     expect(page).to have_content(recipe.name)
-    expect(page).to have_content(recipe.cuisine)
+    expect(page).to have_content(recipe.cuisine.name)
     expect(page).to have_content(recipe.type_of_food)
     expect(page).to have_content(recipe.food_preferences)
     expect(page).to have_content(recipe.servings)
@@ -33,13 +32,12 @@ feature 'Create a new recipe' do
   end
 
   scenario 'successfully without image' do
-    cuisine = build(:cuisine)
     recipe = build(:recipe)
 
     visit new_recipe_path
 
     fill_in 'recipe[name]', with: recipe.name
-    fill_in 'recipe[cuisine]', with: recipe.cuisine
+    select recipe.cuisine.name, from: 'recipe[cuisine_id]'
     fill_in 'recipe[type_of_food]', with: recipe.type_of_food
     fill_in 'recipe[food_preferences]', with: recipe.food_preferences
     fill_in 'recipe[servings]', with: recipe.servings
@@ -51,7 +49,7 @@ feature 'Create a new recipe' do
     click_on 'Salvar receita'
 
     expect(page).to have_content(recipe.name)
-    expect(page).to have_content(recipe.cuisine)
+    expect(page).to have_content(recipe.cuisine.name)
     expect(page).to have_content(recipe.type_of_food)
     expect(page).to have_content(recipe.food_preferences)
     expect(page).to have_content(recipe.servings)
@@ -64,13 +62,12 @@ feature 'Create a new recipe' do
   end
 
   scenario 'unsuccessfully' do
-    cuisine = build(:cuisine)
     recipe = build(:recipe)
 
     visit new_recipe_path
 
     fill_in 'recipe[name]', with: recipe.name
-    fill_in 'recipe[cuisine]', with: recipe.cuisine
+    select recipe.cuisine.name, from: 'recipe[cuisine_id]'
     fill_in 'recipe[type_of_food]', with: recipe.type_of_food
     fill_in 'recipe[food_preferences]', with: recipe.food_preferences
     fill_in 'recipe[servings]', with: recipe.servings

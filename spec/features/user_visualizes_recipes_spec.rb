@@ -2,7 +2,6 @@ require 'rails_helper'
 
 feature 'Visualize a new recipe' do
   scenario 'successfully' do
-    cuisine = build(:cuisine)
     recipe = create(:recipe)
 
     visit root_path
@@ -13,7 +12,7 @@ feature 'Visualize a new recipe' do
     expect(page).to have_content('Últimas Receitas')
     expect(page).to have_content('Favoritas dos Usuários')
     expect(page).to have_content(recipe.name)
-    expect(page).to have_content(recipe.cuisine)
+    expect(page).to have_content(recipe.cuisine.name)
     expect(page).to have_content(recipe.type_of_food)
     expect(page).to have_content(recipe.food_preferences)
     expect(page).to have_content(recipe.difficulty)

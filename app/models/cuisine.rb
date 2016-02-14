@@ -1,3 +1,4 @@
 class Cuisine < ActiveRecord::Base
-  belongs_to :recipe
+  validates :name, presence: true
+  has_many :recipes
 end
