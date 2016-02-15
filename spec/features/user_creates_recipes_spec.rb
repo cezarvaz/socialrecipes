@@ -12,7 +12,7 @@ feature 'Create a new recipe' do
     select recipe.preference.name, from: 'recipe[preference_id]'
     fill_in 'recipe[servings]', with: recipe.servings
     fill_in 'recipe[prepare_time]', with: recipe.prepare_time
-    fill_in 'recipe[difficulty]', with: recipe.difficulty
+    select recipe.difficulty, from: 'recipe[difficulty]'
     fill_in 'recipe[ingredients]', with: recipe.ingredients
     fill_in 'recipe[directions]', with: recipe.directions
     attach_file 'recipe[image]', 'spec/images/receita-de-frango-ao-curry.jpg'
@@ -42,7 +42,7 @@ feature 'Create a new recipe' do
     select recipe.preference.name, from: 'recipe[preference_id]'
     fill_in 'recipe[servings]', with: recipe.servings
     fill_in 'recipe[prepare_time]', with: recipe.prepare_time
-    fill_in 'recipe[difficulty]', with: recipe.difficulty
+    select recipe.difficulty, from: 'recipe[difficulty]'
     fill_in 'recipe[ingredients]', with: recipe.ingredients
     fill_in 'recipe[directions]', with: recipe.directions
 
@@ -72,7 +72,7 @@ feature 'Create a new recipe' do
     select recipe.preference.name, from: 'recipe[preference_id]'
     fill_in 'recipe[servings]', with: recipe.servings
     fill_in 'recipe[prepare_time]', with: recipe.prepare_time
-    fill_in 'recipe[difficulty]', with: recipe.difficulty
+    select recipe.difficulty, from: 'recipe[difficulty]'
     fill_in 'recipe[directions]', with: recipe.directions
 
     click_on 'Salvar receita'

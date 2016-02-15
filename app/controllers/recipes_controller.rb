@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
-  before_action :set_recipe, only: [:edit, :show, :update]
-  before_action :set_collections, only: [:edit, :show, :update]
+  before_action :set_recipe, only: [:show]
+  before_action :set_collections, only: [:new, :create, :show]
 
   def show
   end
@@ -28,6 +28,7 @@ class RecipesController < ApplicationController
     @cuisines = Cuisine.all
     @types = Type.all
     @preferences = Preference.all
+    @difficulties = Difficulty::DIFFICULTIES
   end
 
   def recipe_params

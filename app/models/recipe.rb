@@ -8,4 +8,6 @@ class Recipe < ActiveRecord::Base
   belongs_to :cuisine
   belongs_to :type
   belongs_to :preference
+  validates :difficulty, inclusion: { in: Difficulty::DIFFICULTIES,
+                                      message: '%{value} não é um valor válido' }
 end

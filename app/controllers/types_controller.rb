@@ -1,5 +1,5 @@
 class TypesController < ApplicationController
-  before_action :set_type, only: [:edit, :show, :update]
+  before_action :set_type, only: [:show]
 
   def show
   end

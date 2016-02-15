@@ -8,7 +8,7 @@
         <%= f.association :preference, label: 'Preferências de comida' %>
         <%= f.input :servings, label: 'Quantas pessoas serve' %>
         <%= f.input :prepare_time, label: 'Tempo de preparo (em minutos)' %>
-        <%= f.input :difficulty, label: 'Nível de dificuldade (Fácil, Média ou Difícil)' %>
+        <%= f.input :difficulty, label: 'Nível de dificuldade (Fácil, Média ou Difícil)', collection: @difficulties %>
         <%= f.input :ingredients, as: :text, label: 'Ingredientes' %>
         <%= f.input :directions, as: :text, label: 'Passo a passo' %>
         <%= f.input :image, as: :file, label: 'Imagem' %>

@@ -1,5 +1,5 @@
 class PreferencesController < ApplicationController
-  before_action :set_preference, only: [:edit, :show, :update]
+  before_action :set_preference, only: [:show]
 
   def show
   end
