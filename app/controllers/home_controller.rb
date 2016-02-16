@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @recipes = Recipe.all.order(created_at: :desc).limit(5)
+    @recipes = Recipe.last(20)
     @cuisines = Cuisine.all
     @types = Type.all
     @preferences = Preference.all
