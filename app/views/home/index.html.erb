@@ -1,77 +1,73 @@
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-3">
+    <aside>
+      <h3>Preferência</h3>
+      <dl>
+        <% @preferences.each do |preference| %>
+          <dt class="text-left"> <%= preference.name %> </dt>
+        <% end  %>
+      </dl>
+    </aside>
+    <br>
+    <aside>
+      <h3>Tipo</h3>
+      <dl>
+        <% @types.each do |type| %>
+          <dt class="text-left"> <%= type.name %> </dt>
+        <% end  %>
+      </dl>
+    </aside>
+    <br>
+    <aside>
+      <h3>Cozinha</h3>
+      <dl>
+        <% @cuisines.each do |cuisine| %>
+          <dt class="text-left"> <%= cuisine.name %> </dt>
+        <% end  %>
+      </dl>
+    </aside>
+  </div>
+
+  <div class="col-md-9">
     <div class="row">
-      <div class="col-md-3">
-        <aside>
-          <h3>Preferência</h3>
-          <dl>
-            <% @preferences.each do |preference| %>
-              <dt class="text-left"> <%= preference.name %> </dt>
-            <% end  %>
-          </dl>
-        </aside>
-        <br>
-        <aside>
-          <h3>Tipo</h3>
-          <dl>
-            <% @types.each do |type| %>
-              <dt class="text-left"> <%= type.name %> </dt>
-            <% end  %>
-          </dl>
-        </aside>
-        <br>
-        <aside>
-          <h3>Cozinha</h3>
-          <dl>
-            <% @cuisines.each do |cuisine| %>
-              <dt class="text-left"> <%= cuisine.name %> </dt>
-            <% end  %>
-          </dl>
-        </aside>
-      </div>
+        <div class="col-md-6">
+          <section id="last_recipes">
+            <h3>Últimas Receitas</h3>
+            <% @recipes.each do |recipe| %>
+              <div class="row">
+                <div class="col-md-5">
+                  <%= image_tag recipe.image.url, class: 'img-responsive' %>
+                </div>
+                <div class="col-md-7">
+                  <p><%= link_to recipe.name, recipe %></p>
+                  <p>Preferência: <%= recipe.preference.name %></p>
+                  <p>Tipo: <%= recipe.type.name %></p>
+                  <p>Cozinha: <%= recipe.cuisine.name %></p>
+                  <p>Dificuldade: <%= recipe.difficulty %></p>
+                </div>
+              </div>
+            <% end %>
+          </section>
+        </div>
 
-      <div class="col-md-9">
-        <div class="row">
-            <div class="col-md-6">
-              <section id="last_recipes">
-                <h3>Últimas Receitas</h3>
-                <% @recipes.each do |recipe| %>
-                  <div class="row">
-                    <div class="col-md-5">
-                      <%= image_tag recipe.image.url, class: 'img-responsive' %>
-                    </div>
-                    <div class="col-md-7">
-                      <p><%= link_to recipe.name, recipe %></p>
-                      <p>Preferência: <%= recipe.preference.name %></p>
-                      <p>Tipo: <%= recipe.type.name %></p>
-                      <p>Cozinha: <%= recipe.cuisine.name %></p>
-                      <p>Dificuldade: <%= recipe.difficulty %></p>
-                    </div>
-                  </div>
-                <% end %>
-              </section>
-            </div>
-
-            <div class="col-md-6">
-              <section id="user_favorites">
-                <h3>Favoritas dos Usuários</h3>
-                <% @recipes.each do |recipe| %>
-                  <div class="row">
-                    <div class="col-md-5">
-                      <%= image_tag recipe.image.url, class: 'img-responsive' %>
-                    </div>
-                    <div class="col-md-7">
-                      <p><%= link_to recipe.name, recipe %></p>
-                      <p>Preferência: <%= recipe.preference.name %></p>
-                      <p>Tipo: <%= recipe.type.name %></p>
-                      <p>Cozinha: <%= recipe.cuisine.name %></p>
-                      <p>Dificuldade: <%= recipe.difficulty %></p>
-                    </div>
-                  </div>
-                <% end %>
-              </section>
-            </div>
-      </div>
-    </div>
+        <div class="col-md-6">
+          <section id="user_favorites">
+            <h3>Favoritas dos Usuários</h3>
+            <% @recipes.each do |recipe| %>
+              <div class="row">
+                <div class="col-md-5">
+                  <%= image_tag recipe.image.url, class: 'img-responsive' %>
+                </div>
+                <div class="col-md-7">
+                  <p><%= link_to recipe.name, recipe %></p>
+                  <p>Preferência: <%= recipe.preference.name %></p>
+                  <p>Tipo: <%= recipe.type.name %></p>
+                  <p>Cozinha: <%= recipe.cuisine.name %></p>
+                  <p>Dificuldade: <%= recipe.difficulty %></p>
+                </div>
+              </div>
+            <% end %>
+          </section>
+        </div>
   </div>
 </div>
